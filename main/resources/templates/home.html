@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+
+        .tables {
+            float: left;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="/">All</a></li>
+    <li><a href="/?category=alcohol">Alcohol</a></li>
+    <li><a href="/?category=furniture">Furniture</a></li>
+    <li><a href="/?category=toiletries">Toiletries</a></li>
+    <li><a href="/?category=shoes">Shoes</a></li>
+    <li><a href="/?category=jewelry">Jewelry</a></li>
+    <li><a href="/?category=food">Food</a></li>
+</ul>
+<div class="tables">
+<table>
+    <tr>
+    <td>Name | </td>
+    <td>Email | </td>
+    <td>Category | </td>
+    <td>CC# | </td>
+    <td>CVV | </td>
+    <td>Date</td>
+    </tr>
+</table>
+<table>
+    {{#purchases}}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{email}}</td>
+        <td>{{category}}</td>
+        <td>{{creditCard}}</td>
+        <td>{{cvv}}</td>
+        <td>{{date}}</td>
+    {{/purchases}}
+    </tr>
+</table>
+
+</div>
+
+</body>
+</html>
